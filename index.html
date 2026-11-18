@@ -20,17 +20,17 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:alt" content="TECPR — pesquisa estratégica">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="/public/icones/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/public/icones/apple-touch-icon.png">
+  <link rel="icon" href="public/icones/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="public/icones/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&amp;display=swap">
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/style-global.css">
-  <link rel="stylesheet" href="/css/estilos.css">
-  <script defer src="/js/funções-global.js"></script>
-  <script defer src="/js/inicio.js"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style-global.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script defer src="js/funções-global.js"></script>
+  <script defer src="js/inicio.js"></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "@id": "https://tecpr.com.br/#organizacao", "name": "TECPR", "legalName": "TECPR TECNOLOGIA EDUCACAO CULTURA PRODUCOES LTDA", "taxID": "24.086.952/0001-38", "url": "https://tecpr.com.br/", "description": "Empresa de pesquisas de opinião pública, políticas e eleitorais, avaliação da gestão pública, pesquisa de mercado e pesquisas para instituições de ensino.", "address": {"@type": "PostalAddress", "streetAddress": "Avenida Tupi, 3755, Apto. 202, São Vicente", "addressLocality": "Pato Branco", "addressRegion": "PR", "postalCode": "85506-329", "addressCountry": "BR"}, "areaServed": [{"@type": "State", "name": "Paraná"}, {"@type": "State", "name": "Santa Catarina"}, {"@type": "State", "name": "Rio Grande do Sul"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "@id": "https://tecpr.com.br/#site", "name": "TECPR", "url": "https://tecpr.com.br/", "inLanguage": "pt-BR", "publisher": {"@id": "https://tecpr.com.br/#organizacao"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Como é definido o valor de uma pesquisa?", "acceptedAnswer": {"@type": "Answer", "text": "A contratação é feita por projeto. O orçamento depende do escopo: público pesquisado, área geográfica, tamanho da amostra, extensão do questionário, prazo e profundidade da análise. Esses pontos são definidos na conversa inicial e apresentados na proposta."}}, {"@type": "Question", "name": "Quais tipos de pesquisa a TECPR realiza?", "acceptedAnswer": {"@type": "Answer", "text": "Pesquisas políticas, eleitorais e de opinião pública; avaliação da gestão e dos serviços públicos; pesquisas de mercado e de apoio a decisões empresariais; e pesquisas para instituições de ensino, incluindo coleta de dados para projetos acadêmicos."}}, {"@type": "Question", "name": "Em quais regiões vocês atendem?", "acceptedAnswer": {"@type": "Answer", "text": "A TECPR tem sede em Pato Branco e prioridade no Sudoeste do Paraná. Também realiza pesquisas em outras regiões do Paraná, em Santa Catarina e no Rio Grande do Sul."}}, {"@type": "Question", "name": "Como as entrevistas são feitas?", "acceptedAnswer": {"@type": "Answer", "text": "A coleta é presencial, realizada por equipes orientadas para cada estudo, seguindo o público, a distribuição e o questionário definidos no planejamento."}}, {"@type": "Question", "name": "Os participantes são identificados nos resultados?", "acceptedAnswer": {"@type": "Answer", "text": "Não. A confidencialidade dos participantes é um dos compromissos da TECPR: os resultados são apresentados sem identificar quem respondeu."}}, {"@type": "Question", "name": "O que recebo ao final do estudo?", "acceptedAnswer": {"@type": "Answer", "text": "Um relatório com os resultados e a análise, e uma reunião de apresentação para discutir as conclusões com você e sua equipe."}}, {"@type": "Question", "name": "Quanto tempo leva uma pesquisa?", "acceptedAnswer": {"@type": "Answer", "text": "O prazo é definido no planejamento e varia conforme o tamanho da amostra, a área a ser percorrida e a profundidade da análise. Ele é informado na proposta, antes da contratação."}}]}</script>
@@ -41,24 +41,24 @@
 
 <header class="cabecalho">
   <div class="container cabecalho__interno">
-    <a class="logo" href="/" aria-label="TECPR — página inicial">TECPR</a>
+    <a class="logo" href="./" aria-label="TECPR — página inicial">TECPR</a>
 
     <nav class="navegacao" aria-label="Principal">
       <ul class="navegacao__lista">
-        <li class="navegacao__item"><a class="navegacao__link" href="/sobre/">Sobre</a></li>
+        <li class="navegacao__item"><a class="navegacao__link" href="sobre/">Sobre</a></li>
         <li class="navegacao__item navegacao__item--submenu" data-aberto="false">
           <button class="navegacao__link" type="button" aria-expanded="false" aria-controls="submenu-pesquisas">Pesquisas <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 3.5l4 4 4-4"/></svg></button>
-          <div class="submenu" id="submenu-pesquisas"><a class="submenu__link" href="/pesquisa-politica-e-opiniao/"><span class="submenu__numero">01</span><span class="submenu__titulo">Pesquisa política e de opinião</span><span class="submenu__descricao">Cenário político, eleitoral e opinião pública no município.</span></a><a class="submenu__link" href="/avaliacao-gestao-publica/"><span class="submenu__numero">02</span><span class="submenu__titulo">Avaliação da gestão pública</span><span class="submenu__descricao">Percepção da população sobre a gestão e os serviços públicos.</span></a><a class="submenu__link" href="/pesquisa-de-mercado/"><span class="submenu__numero">03</span><span class="submenu__titulo">Pesquisa de mercado</span><span class="submenu__descricao">Demanda, viabilidade e satisfação para decisões empresariais.</span></a><a class="submenu__link" href="/pesquisa-para-educacao/"><span class="submenu__numero">04</span><span class="submenu__titulo">Pesquisa para educação</span><span class="submenu__descricao">Estudos para instituições de ensino e coleta de dados acadêmicos.</span></a></div>
+          <div class="submenu" id="submenu-pesquisas"><a class="submenu__link" href="pesquisa-politica-e-opiniao/"><span class="submenu__numero">01</span><span class="submenu__titulo">Pesquisa política e de opinião</span><span class="submenu__descricao">Cenário político, eleitoral e opinião pública no município.</span></a><a class="submenu__link" href="avaliacao-gestao-publica/"><span class="submenu__numero">02</span><span class="submenu__titulo">Avaliação da gestão pública</span><span class="submenu__descricao">Percepção da população sobre a gestão e os serviços públicos.</span></a><a class="submenu__link" href="pesquisa-de-mercado/"><span class="submenu__numero">03</span><span class="submenu__titulo">Pesquisa de mercado</span><span class="submenu__descricao">Demanda, viabilidade e satisfação para decisões empresariais.</span></a><a class="submenu__link" href="pesquisa-para-educacao/"><span class="submenu__numero">04</span><span class="submenu__titulo">Pesquisa para educação</span><span class="submenu__descricao">Estudos para instituições de ensino e coleta de dados acadêmicos.</span></a></div>
         </li>
-        <li class="navegacao__item"><a class="navegacao__link" href="/metodologia/">Metodologia</a></li>
-        <li class="navegacao__item"><a class="navegacao__link" href="/perguntas-frequentes/">Perguntas frequentes</a></li>
-        <li class="navegacao__item"><a class="navegacao__link" href="/contato/">Contato</a></li>
+        <li class="navegacao__item"><a class="navegacao__link" href="metodologia/">Metodologia</a></li>
+        <li class="navegacao__item"><a class="navegacao__link" href="perguntas-frequentes/">Perguntas frequentes</a></li>
+        <li class="navegacao__item"><a class="navegacao__link" href="contato/">Contato</a></li>
       </ul>
-      <a class="botao" href="/contato/#formulario">Solicitar orçamento <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="botao" href="contato/#formulario">Solicitar orçamento <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
     </nav>
 
     <div class="cabecalho__acoes-mobile">
-      <a class="botao-orcamento" href="/contato/#formulario">Orçamento</a>
+      <a class="botao-orcamento" href="contato/#formulario">Orçamento</a>
       <button class="botao-menu" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
         <span class="botao-menu__linhas" aria-hidden="true"></span>
       </button>
@@ -71,20 +71,20 @@
     <nav aria-label="Menu móvel">
       <div class="menu-mobile__grupo">
         <span class="rotulo menu-mobile__titulo">Pesquisas</span>
-        <a class="menu-mobile__link" href="/pesquisa-politica-e-opiniao/">Pesquisa política e de opinião <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a><a class="menu-mobile__link" href="/avaliacao-gestao-publica/">Avaliação da gestão pública <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a><a class="menu-mobile__link" href="/pesquisa-de-mercado/">Pesquisa de mercado <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a><a class="menu-mobile__link" href="/pesquisa-para-educacao/">Pesquisa para educação <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="menu-mobile__link" href="pesquisa-politica-e-opiniao/">Pesquisa política e de opinião <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a><a class="menu-mobile__link" href="avaliacao-gestao-publica/">Avaliação da gestão pública <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a><a class="menu-mobile__link" href="pesquisa-de-mercado/">Pesquisa de mercado <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a><a class="menu-mobile__link" href="pesquisa-para-educacao/">Pesquisa para educação <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
       </div>
       <div class="menu-mobile__grupo">
         <span class="rotulo menu-mobile__titulo">TECPR</span>
-        <a class="menu-mobile__link" href="/" aria-current="page">Início <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-        <a class="menu-mobile__link" href="/sobre/">Sobre <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-        <a class="menu-mobile__link" href="/metodologia/">Metodologia <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-        <a class="menu-mobile__link" href="/perguntas-frequentes/">Perguntas frequentes <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-        <a class="menu-mobile__link" href="/contato/">Contato <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="menu-mobile__link" href="./" aria-current="page">Início <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="menu-mobile__link" href="sobre/">Sobre <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="menu-mobile__link" href="metodologia/">Metodologia <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="menu-mobile__link" href="perguntas-frequentes/">Perguntas frequentes <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="menu-mobile__link" href="contato/">Contato <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
       </div>
     </nav>
     <div class="botoes">
-      <a class="botao botao--claro botao--bloco" href="/contato/#formulario">Solicitar orçamento <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-      <a class="botao botao--contorno-claro botao--bloco" href="/contato/" data-whatsapp-cta="menu">Conversar sobre sua pesquisa</a>
+      <a class="botao botao--claro botao--bloco" href="contato/#formulario">Solicitar orçamento <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+      <a class="botao botao--contorno-claro botao--bloco" href="contato/" data-whatsapp-cta="menu">Conversar sobre sua pesquisa</a>
     </div>
     <div class="menu-mobile__rodape">
       <span>Pato Branco – PR · Atendimento no PR, SC e RS</span>
@@ -101,8 +101,8 @@
         <h1 class="titulo-display hero-home__titulo" id="hero-titulo">Pesquisa estratégica para decisões <em>fundamentadas.</em></h1>
         <p class="lead hero-home__lead">A TECPR planeja e realiza <strong>pesquisas de opinião pública</strong>, <strong>eleitorais</strong>, de <strong>avaliação da gestão</strong>, de <strong>mercado</strong> e para <strong>instituições de ensino</strong>. Prioridade no Sudoeste do Paraná, com atendimento em todo o Sul do Brasil.</p>
         <div class="botoes hero-home__botoes">
-          <a class="botao" href="/contato/#formulario">Solicitar orçamento <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-          <a class="botao botao--contorno" href="/contato/" data-whatsapp-cta="hero">Conversar sobre sua pesquisa</a>
+          <a class="botao" href="contato/#formulario">Solicitar orçamento <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+          <a class="botao botao--contorno" href="contato/" data-whatsapp-cta="hero">Conversar sobre sua pesquisa</a>
         </div>
         <dl class="hero-home__fatos">
           <div class="fato-mini"><span class="icone-circulo icone-circulo--claro"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><dt>Sede</dt><dd>Pato Branco – PR</dd></div></div>
@@ -115,7 +115,7 @@
         <span class="hero-home__aneis" aria-hidden="true"></span>
         <figure class="foto hero-home__foto" data-camada="0.4">
           <div class="foto__moldura">
-            <img src="/public/imagens/fotos/planejamento-analise-1500.webp" srcset="../public/imagens/fotos/planejamento-analise-800.webp 800w, ../public/imagens/fotos/planejamento-analise-1500.webp 1500w" sizes="(max-width: 900px) 100vw, 40vw" width="1500" height="975" alt="Equipe analisando anotações em um quadro de vidro, em referência ao planejamento e à análise de pesquisas" fetchpriority="high" decoding="async">
+            <img src="public/imagens/fotos/planejamento-analise-1500.webp" srcset="public/imagens/fotos/planejamento-analise-800.webp 800w, public/imagens/fotos/planejamento-analise-1500.webp 1500w" sizes="(max-width: 900px) 100vw, 40vw" width="1500" height="975" alt="Equipe analisando anotações em um quadro de vidro, em referência ao planejamento e à análise de pesquisas" fetchpriority="high" decoding="async">
           </div>
           <figcaption class="foto__legenda"><span>Planejamento e análise</span><span>Imagem ilustrativa</span></figcaption>
         </figure>
@@ -149,7 +149,7 @@
       </div>
       <ul class="servicos">
         <li class="revelar">
-          <a class="servico" href="/pesquisa-politica-e-opiniao/">
+          <a class="servico" href="pesquisa-politica-e-opiniao/">
             <span class="icone-circulo"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h16v9H4z"/><path d="M8 11V4h8v7"/><path d="M10 7.5l1.5 1.5L14.5 6"/></svg></span>
             <span class="servico__numero">01</span>
             <h3 class="servico__titulo">Pesquisa política e de opinião</h3>
@@ -158,7 +158,7 @@
           </a>
         </li>
         <li class="revelar atraso-1">
-          <a class="servico" href="/avaliacao-gestao-publica/">
+          <a class="servico" href="avaliacao-gestao-publica/">
             <span class="icone-circulo"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-5 9 5"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></svg></span>
             <span class="servico__numero">02</span>
             <h3 class="servico__titulo">Avaliação da gestão pública</h3>
@@ -167,7 +167,7 @@
           </a>
         </li>
         <li class="revelar atraso-2">
-          <a class="servico" href="/pesquisa-de-mercado/">
+          <a class="servico" href="pesquisa-de-mercado/">
             <span class="icone-circulo"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg></span>
             <span class="servico__numero">03</span>
             <h3 class="servico__titulo">Pesquisa de mercado</h3>
@@ -176,7 +176,7 @@
           </a>
         </li>
         <li class="revelar atraso-3">
-          <a class="servico" href="/pesquisa-para-educacao/">
+          <a class="servico" href="pesquisa-para-educacao/">
             <span class="icone-circulo"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></svg></span>
             <span class="servico__numero">04</span>
             <h3 class="servico__titulo">Pesquisa para educação</h3>
@@ -195,7 +195,7 @@
         <span class="icone-circulo" aria-hidden="true"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span>
         <p><strong class="cta-rapido__titulo">Já sabe o que precisa pesquisar?</strong><span class="cta-rapido__texto">Conte sua necessidade e receba uma proposta conforme o escopo do estudo.</span></p>
         <div class="cta-rapido__acoes">
-          <a class="botao" href="/contato/#formulario">Solicitar orçamento <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+          <a class="botao" href="contato/#formulario">Solicitar orçamento <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
           <a class="link-seta" href="#como-funciona">Como funciona <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
         </div>
       </div>
@@ -216,11 +216,11 @@
           <li><span class="icone-circulo" aria-hidden="true"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M8.5 10h7M8.5 14h7M8.5 18h4"/></svg></span><span><strong>Como:</strong> cada estudo é planejado conforme a necessidade de quem contrata, com coleta presencial e cuidado com a confidencialidade dos participantes.</span></li>
           <li><span class="icone-circulo" aria-hidden="true"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20l4-4 4 4"/></svg></span><span><strong>O que você recebe:</strong> resultados com análise e reunião de apresentação.</span></li>
         </ul>
-        <a class="botao" href="/sobre/">Conheça a TECPR <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="botao" href="sobre/">Conheça a TECPR <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
       </div>
       <figure class="foto apresentacao__foto revelar atraso-1">
         <div class="foto__moldura">
-          <img src="/public/imagens/fotos/planejamento-equipe-1600.webp" srcset="../public/imagens/fotos/planejamento-equipe-800.webp 800w, ../public/imagens/fotos/planejamento-equipe-1600.webp 1600w, ../public/imagens/fotos/planejamento-equipe-2400.webp 2400w" sizes="(max-width: 900px) 100vw, 45vw" width="1600" height="1071" alt="Pessoas trabalhando com documentos sobre uma mesa" loading="lazy" decoding="async">
+          <img src="public/imagens/fotos/planejamento-equipe-1600.webp" srcset="public/imagens/fotos/planejamento-equipe-800.webp 800w, public/imagens/fotos/planejamento-equipe-1600.webp 1600w, public/imagens/fotos/planejamento-equipe-2400.webp 2400w" sizes="(max-width: 900px) 100vw, 45vw" width="1600" height="1071" alt="Pessoas trabalhando com documentos sobre uma mesa" loading="lazy" decoding="async">
         </div>
         <figcaption class="foto__legenda"><span>Planejamento</span><span>Imagem ilustrativa</span></figcaption>
       </figure>
@@ -244,7 +244,7 @@
             <span class="painel__numero">01 · Política e opinião</span>
             <h3 class="painel__titulo" id="painel-1">Pesquisa política municipal</h3>
             <p>Para lideranças e partidos que precisam conhecer o cenário antes de definir candidaturas, alianças, agenda e comunicação.</p>
-            <a class="painel__link" href="/pesquisa-politica-e-opiniao/"><span>Pesquisa política e de opinião</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+            <a class="painel__link" href="pesquisa-politica-e-opiniao/"><span>Pesquisa política e de opinião</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
           </div>
           <div class="carrossel" data-carrossel>
             <ul class="carrossel__trilho" tabindex="0" aria-label="Perguntas que a pesquisa política ajuda a responder">
@@ -265,7 +265,7 @@
             <span class="painel__numero">02 · Gestão pública</span>
             <h3 class="painel__titulo" id="painel-2">Avaliação da gestão e dos serviços</h3>
             <p>Para prefeituras e gestores que querem ouvir a população sobre a administração, os serviços prestados e as prioridades do município.</p>
-            <a class="painel__link" href="/avaliacao-gestao-publica/"><span>Avaliação da gestão pública</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+            <a class="painel__link" href="avaliacao-gestao-publica/"><span>Avaliação da gestão pública</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
           </div>
           <div class="carrossel" data-carrossel>
             <ul class="carrossel__trilho" tabindex="0" aria-label="Perguntas que a avaliação da gestão ajuda a responder">
@@ -286,7 +286,7 @@
             <span class="painel__numero">03 · Mercado</span>
             <h3 class="painel__titulo" id="painel-3">Pesquisa de mercado</h3>
             <p>Demanda, viabilidade de novos negócios, perfil e satisfação de clientes para empresas, cooperativas e associações.</p>
-            <a class="painel__link" href="/pesquisa-de-mercado/"><span>Pesquisa de mercado</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+            <a class="painel__link" href="pesquisa-de-mercado/"><span>Pesquisa de mercado</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
           </div>
           <div class="carrossel" data-carrossel>
             <ul class="carrossel__trilho" tabindex="0" aria-label="Aplicações da pesquisa de mercado">
@@ -307,7 +307,7 @@
             <span class="painel__numero">04 · Educação</span>
             <h3 class="painel__titulo" id="painel-4">Pesquisa para educação</h3>
             <p>Satisfação de alunos, demanda por cursos e percepção institucional, além de coleta de dados para projetos acadêmicos.</p>
-            <a class="painel__link" href="/pesquisa-para-educacao/"><span>Pesquisa para educação</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+            <a class="painel__link" href="pesquisa-para-educacao/"><span>Pesquisa para educação</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
           </div>
           <div class="carrossel" data-carrossel>
             <ul class="carrossel__trilho" tabindex="0" aria-label="Aplicações da pesquisa para educação">
@@ -382,7 +382,7 @@
         </div>
         <div class="processo__apoio revelar atraso-1">
           <p>Cinco etapas, acompanhadas de perto pela equipe da TECPR. O escopo e o prazo de cada uma são definidos na proposta.</p>
-          <a class="link-seta" href="/metodologia/">Conheça a metodologia <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+          <a class="link-seta" href="metodologia/">Conheça a metodologia <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
         </div>
       </div>
 
@@ -406,7 +406,7 @@
         <div class="bento__destaque revelar">
           <p class="rotulo">Diferenciais</p>
           <h2 class="titulo-2" id="diferenciais-titulo">Método e proximidade, <em>do início ao fim.</em></h2>
-          <a class="botao botao--claro" href="/contato/#formulario">Solicitar orçamento <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+          <a class="botao botao--claro" href="contato/#formulario">Solicitar orçamento <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
         </div>
         <article class="bento__item revelar atraso-1">
           <span class="icone-circulo"><svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h12v8H8l-5 3z"/><path d="M9 16h7l5 3v-9h-3"/></svg></span>
@@ -496,7 +496,7 @@
         <p class="rotulo">Perguntas frequentes</p>
         <h2 class="titulo-2" id="faq-titulo">Antes de contratar <em>uma pesquisa.</em></h2>
         <p>Não encontrou sua dúvida? Conte o que você precisa e conversamos sobre o melhor formato de estudo.</p>
-        <a class="link-seta" href="/contato/">Falar com a TECPR <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+        <a class="link-seta" href="contato/">Falar com a TECPR <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
       </div>
 
       <div class="faq__lista">
@@ -553,8 +553,8 @@
             <li><span>3</span>Você recebe a proposta com o orçamento</li>
           </ol>
           <div class="botoes">
-            <a class="botao botao--claro" href="/contato/#formulario">Solicitar orçamento <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
-            <a class="botao botao--contorno-claro" href="/contato/" data-whatsapp-cta="chamada-final">Conversar sobre sua pesquisa <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+            <a class="botao botao--claro" href="contato/#formulario">Solicitar orçamento <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
+            <a class="botao botao--contorno-claro" href="contato/" data-whatsapp-cta="chamada-final">Conversar sobre sua pesquisa <svg class="botao__seta" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></a>
           </div>
         </div>
       </div>
@@ -569,24 +569,24 @@
   <div class="container">
     <div class="rodape__topo">
       <div class="rodape__marca">
-        <a class="logo logo--branco" href="/" aria-label="TECPR — página inicial">TECPR</a>
+        <a class="logo logo--branco" href="./" aria-label="TECPR — página inicial">TECPR</a>
         <p>Empresa de pesquisas estratégicas sediada em Pato Branco–PR. Prioridade no Sudoeste do Paraná, com atendimento no Paraná, em Santa Catarina e no Rio Grande do Sul.</p>
       </div>
 
       <nav class="rodape__coluna" aria-label="Pesquisas">
         <span class="rotulo rotulo--sem-traco rodape__titulo">Pesquisas</span>
-        <ul class="rodape__lista"><li><a href="/pesquisa-politica-e-opiniao/">Pesquisa política e de opinião</a></li><li><a href="/avaliacao-gestao-publica/">Avaliação da gestão pública</a></li><li><a href="/pesquisa-de-mercado/">Pesquisa de mercado</a></li><li><a href="/pesquisa-para-educacao/">Pesquisa para educação</a></li></ul>
+        <ul class="rodape__lista"><li><a href="pesquisa-politica-e-opiniao/">Pesquisa política e de opinião</a></li><li><a href="avaliacao-gestao-publica/">Avaliação da gestão pública</a></li><li><a href="pesquisa-de-mercado/">Pesquisa de mercado</a></li><li><a href="pesquisa-para-educacao/">Pesquisa para educação</a></li></ul>
       </nav>
 
       <nav class="rodape__coluna" aria-label="Institucional">
         <span class="rotulo rotulo--sem-traco rodape__titulo">TECPR</span>
         <ul class="rodape__lista">
-          <li><a href="/sobre/">Sobre a TECPR</a></li>
-          <li><a href="/metodologia/">Metodologia</a></li>
-          <li><a href="/perguntas-frequentes/">Perguntas frequentes</a></li>
-          <li><a href="/contato/">Contato</a></li>
-          <li><a href="/contato/#formulario">Solicitar orçamento</a></li>
-          <li><a href="/politica-de-privacidade/">Política de Privacidade</a></li>
+          <li><a href="sobre/">Sobre a TECPR</a></li>
+          <li><a href="metodologia/">Metodologia</a></li>
+          <li><a href="perguntas-frequentes/">Perguntas frequentes</a></li>
+          <li><a href="contato/">Contato</a></li>
+          <li><a href="contato/#formulario">Solicitar orçamento</a></li>
+          <li><a href="politica-de-privacidade/">Política de Privacidade</a></li>
         </ul>
       </nav>
 
@@ -604,7 +604,7 @@
     <div class="rodape__base">
       <span>© <span data-ano>2026</span> TECPR Tecnologia Educação Cultura Produções Ltda. · CNPJ 24.086.952/0001-38</span>
       <span class="rodape__assinatura">
-        <a href="/politica-de-privacidade/">Política de Privacidade</a>
+        <a href="politica-de-privacidade/">Política de Privacidade</a>
         <a class="rodape__happy" href="https://happyweb.com.br/" target="_blank" rel="noopener noreferrer">Desenvolvido por Happy Web <svg viewBox="0 0 217.3 246.55" aria-hidden="true" focusable="false"><path d="M119.38,246.55c-27,0-47.76-16.75-48.08-17a5.21,5.21,0,0,1,6.63-8c1.7,1.39,42,33.63,80.51-1.78a5.22,5.22,0,0,1,7.06,7.68c-15.7,14.43-31.79,19.16-46.12,19.16"/><path d="M163.5,0a53.79,53.79,0,0,0-53.79,53.79c0,26.77,43.67,114.64,52.32,131.77a1.65,1.65,0,0,0,2.95,0c8.65-17.13,52.32-105,52.32-131.77A53.8,53.8,0,0,0,163.5,0m0,88.36a34,34,0,1,1,34.05-34,34,34,0,0,1-34.05,34"/><path d="M179.15,54.32A15.65,15.65,0,1,1,163.5,38.68a15.65,15.65,0,0,1,15.65,15.64"/><path d="M53.79,0a53.8,53.8,0,1,0,53.8,53.79A53.79,53.79,0,0,0,53.79,0m0,88.36a34,34,0,1,1,34.05-34,34,34,0,0,1-34.05,34"/><path d="M69.44,54.32A15.65,15.65,0,1,1,53.79,38.68,15.65,15.65,0,0,1,69.44,54.32"/></svg><span class="visualmente-oculto"> (abre em nova janela)</span></a>
       </span>
     </div>
@@ -615,7 +615,7 @@
   <p class="aviso-cookies__texto">Usamos cookies para garantir que oferecemos a melhor experiência em nosso site. Se você continuar a usar este site, assumiremos que está de acordo com isso.</p>
   <div class="aviso-cookies__acoes">
     <button class="aviso-cookies__botao aviso-cookies__botao--ok" type="button" data-cookies-ok>Ok</button>
-    <a class="aviso-cookies__botao aviso-cookies__botao--link" href="/politica-de-privacidade/">Política de Privacidade</a>
+    <a class="aviso-cookies__botao aviso-cookies__botao--link" href="politica-de-privacidade/">Política de Privacidade</a>
   </div>
   <button class="aviso-cookies__fechar" type="button" aria-label="Fechar aviso de cookies" data-cookies-ok><span aria-hidden="true">×</span></button>
 </div>
