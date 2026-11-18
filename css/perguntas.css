@@ -1,0 +1,138 @@
+/* ==========================================================================
+   TECPR — Perguntas frequentes (página geral)
+   Reaproveita o acordeão das demais páginas (.faq__item); aqui ficam só o
+   resumo de temas do topo e o cabeçalho claro de cada tema.
+   ========================================================================== */
+
+/* ---------- Topo: temas da página ---------- */
+
+.faq-geral__temas {
+  grid-column: 8 / -1;
+  display: grid;
+  gap: 8px;
+}
+
+.faq-geral__temas li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 18px 8px 8px;
+  border-radius: var(--raio-pilula);
+  background: var(--branco);
+  font-weight: 600;
+}
+
+.faq-geral__temas .icone-circulo {
+  width: 44px;
+  height: 44px;
+}
+
+.faq-geral__temas .icone {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 900px) {
+  .faq-geral__temas {
+    display: none;
+  }
+}
+
+/* ---------- Um tema por seção: cabeçalho à esquerda, perguntas à direita ---------- */
+
+.faq-geral__grade {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--coluna-gap);
+  row-gap: var(--esp-5);
+}
+
+.faq-geral__cabeca {
+  grid-column: 1 / span 4;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--altura-cabecalho) + 24px);
+  display: grid;
+  justify-items: start;
+  gap: var(--esp-2);
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: var(--raio-xl);
+  background: var(--branco);
+}
+
+.secao--suave .faq-geral__cabeca {
+  background: var(--fundo);
+}
+
+.faq-geral__cabeca .icone-circulo {
+  margin-bottom: var(--esp-3);
+}
+
+.faq-geral__numero {
+  color: var(--cinza-texto);
+}
+
+.faq-geral__cabeca p:not(.faq-geral__numero) {
+  color: var(--texto-2);
+}
+
+.faq-geral__cabeca .link-seta {
+  margin-top: var(--esp-4);
+}
+
+.faq-geral .faq__lista {
+  grid-column: 5 / -1;
+}
+
+/* Na seção branca, as perguntas ganham fundo cinza para não sumirem */
+.secao--suave.faq-geral .faq__item {
+  background: var(--fundo);
+  border-color: transparent;
+}
+
+.secao--suave.faq-geral .faq__item:has(.faq__botao[aria-expanded="true"]) {
+  background: var(--branco);
+  border-color: var(--preto);
+}
+
+/* Links dentro das respostas */
+.faq-geral .faq__resposta a {
+  font-weight: 600;
+  color: var(--texto);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+
+.faq-geral .faq__resposta a:hover {
+  text-decoration-thickness: 2.5px;
+}
+
+@media (max-width: 900px) {
+  .faq-geral__cabeca,
+  .faq-geral .faq__lista {
+    grid-column: 1 / -1;
+  }
+
+  .faq-geral__cabeca {
+    position: static;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: var(--esp-4);
+  }
+
+  .faq-geral__cabeca .icone-circulo {
+    grid-row: span 2;
+    margin-bottom: 0;
+  }
+
+  .faq-geral__cabeca p:not(.faq-geral__numero),
+  .faq-geral__cabeca .link-seta {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Primeiro tema logo abaixo dos atalhos: sem somar dois espaços grandes */
+.indice-pagina + .faq-geral {
+  padding-top: 0;
+}

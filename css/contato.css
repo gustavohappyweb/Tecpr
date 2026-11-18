@@ -1,0 +1,488 @@
+/* ==========================================================================
+   TECPR — página de contato e formulário de orçamento
+   ========================================================================== */
+
+.hero-interno--compacto {
+  padding-bottom: clamp(40px, 5vw, 72px);
+}
+
+.hero-interno--compacto .hero-interno__texto {
+  grid-column: 1 / span 7;
+}
+
+.hero-contato__lead {
+  grid-column: 9 / -1;
+  margin: 0;
+  color: var(--texto-2);
+}
+
+@media (max-width: 900px) {
+  .hero-interno--compacto .hero-interno__texto,
+  .hero-contato__lead {
+    grid-column: 1 / -1;
+  }
+}
+
+.contato {
+  padding-top: clamp(48px, 6vw, 96px);
+}
+
+.contato__formulario {
+  grid-column: 1 / span 7;
+}
+
+.contato__lado {
+  grid-column: 9 / -1;
+  display: grid;
+  align-content: start;
+  gap: var(--esp-7);
+}
+
+@media (max-width: 960px) {
+  .contato__formulario,
+  .contato__lado {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Formulário ---------- */
+
+.formulario {
+  display: grid;
+  gap: var(--esp-6);
+}
+
+.formulario__cabeca {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--esp-3);
+  padding-bottom: var(--esp-4);
+  border-bottom: 1px solid var(--cinza-linha-forte);
+}
+
+.formulario__cabeca .titulo-3 {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  font-size: 1.625rem;
+}
+
+.formulario__cabeca .texto-secundario {
+  font-size: var(--texto-pequeno);
+}
+
+.campo {
+  display: grid;
+  gap: var(--esp-2);
+}
+
+.campo-grupo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 160px;
+  gap: var(--esp-5);
+}
+
+@media (max-width: 480px) {
+  .campo-grupo {
+    grid-template-columns: minmax(0, 1fr) 112px;
+    gap: var(--esp-3);
+  }
+}
+
+.campo__rotulo {
+  font-weight: 600;
+  font-size: var(--texto-pequeno);
+  letter-spacing: -0.005em;
+}
+
+.campo__entrada {
+  width: 100%;
+  min-height: var(--altura-controle);
+  padding: 14px 16px;
+  border: 1px solid var(--cinza-linha-forte);
+  border-radius: var(--raio);
+  background: var(--branco);
+  color: var(--preto);
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: border-color var(--hover) var(--curva-hover), box-shadow var(--hover) var(--curva-hover), background-color var(--hover) var(--curva-hover);
+}
+
+.campo__entrada:hover {
+  border-color: var(--preto);
+}
+
+.campo__entrada:focus {
+  outline: none;
+  border-color: var(--preto);
+  box-shadow: 0 0 0 1px var(--preto);
+}
+
+.campo__entrada:focus-visible {
+  outline: 2px solid var(--preto);
+  outline-offset: 2px;
+}
+
+.campo__selecao {
+  appearance: none;
+  padding-right: 44px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' fill='none' stroke='%23111111' stroke-width='1.4'%3E%3Cpath d='M1 3.5l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+.campo__texto {
+  min-height: 168px;
+  resize: vertical;
+}
+
+.campo__rodape {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--esp-4);
+}
+
+.campo__ajuda {
+  color: var(--cinza-texto);
+  font-size: 0.875rem;
+}
+
+.campo__contador {
+  flex: none;
+  color: var(--cinza-texto);
+  font-size: 0.6875rem;
+  padding-top: 3px;
+}
+
+.campo__erro {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--preto);
+}
+
+.campo__erro::before {
+  content: "!";
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  flex: none;
+  background: var(--preto);
+  color: var(--branco);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.campo.is-invalido .campo__entrada {
+  border-color: var(--preto);
+  border-width: 2px;
+  padding: 13px 15px;
+  background-color: var(--branco-suave);
+}
+
+.campo.is-invalido .campo__selecao {
+  padding-right: 43px;
+  background-position: right 15px center;
+}
+
+.campo.is-valido .campo__entrada {
+  border-color: #8a8a8a;
+}
+
+.campo-armadilha {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.formulario__aviso {
+  color: var(--cinza-texto);
+  font-size: 0.875rem;
+  max-width: 60ch;
+}
+
+.formulario__aviso a {
+  color: var(--preto);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.formulario__acoes {
+  display: flex;
+}
+
+.formulario__enviar {
+  min-width: 240px;
+  justify-content: space-between;
+}
+
+@media (max-width: 520px) {
+  .formulario__enviar {
+    width: 100%;
+  }
+}
+
+.formulario__carregando {
+  display: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+.formulario__enviar[aria-busy="true"] .formulario__carregando {
+  display: inline-block;
+}
+
+.formulario__enviar[aria-busy="true"] .botao__seta {
+  display: none;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mensagens de estado: sucesso, erro, envio indisponível */
+.formulario__status {
+  display: grid;
+  gap: var(--esp-3);
+  padding: var(--esp-5);
+  border: 1px solid var(--cinza-linha-forte);
+  border-left: 3px solid var(--preto);
+  background: var(--branco-suave);
+}
+
+.formulario__status:focus {
+  outline: none;
+}
+
+.formulario__status strong {
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+}
+
+.formulario__status p {
+  color: var(--texto-2);
+  font-size: var(--texto-pequeno);
+}
+
+.formulario__status[data-tipo="sucesso"] {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.formulario__status[data-tipo="sucesso"] p {
+  color: var(--cinza-claro-texto);
+}
+
+.formulario__status .botao {
+  justify-self: start;
+  margin-top: var(--esp-2);
+}
+
+/* ---------- Coluna lateral ---------- */
+
+.contato__bloco-titulo {
+  color: var(--cinza-texto);
+  font-weight: 500;
+  padding-bottom: var(--esp-3);
+  margin-bottom: var(--esp-4);
+  border-bottom: 1px solid var(--cinza-linha-forte);
+}
+
+.proximos {
+  display: grid;
+  gap: var(--esp-4);
+}
+
+.proximos li {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: var(--esp-2);
+}
+
+.proximos .mono {
+  color: var(--cinza-texto);
+  padding-top: 4px;
+}
+
+.proximos p {
+  font-size: var(--texto-pequeno);
+}
+
+.canais {
+  display: grid;
+  gap: var(--esp-4);
+}
+
+.canais dt {
+  font-size: 0.875rem;
+  color: var(--cinza-texto);
+}
+
+.canais dd {
+  font-weight: 600;
+  font-size: 1.0625rem;
+}
+
+.canais a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.contato__endereco {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+/* ---------- Linguagem de cartões (reformulação visual) ---------- */
+
+.contato__formulario {
+  padding: clamp(24px, 4vw, 52px);
+  border-radius: var(--raio-xl);
+  background: var(--branco);
+}
+
+.formulario__cabeca .titulo-3 {
+  font-family: var(--fonte-base);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.875rem);
+  letter-spacing: -0.025em;
+}
+
+.campo__rotulo {
+  font-size: 1rem;
+}
+
+.campo__entrada {
+  min-height: 58px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border-color: var(--cinza-linha);
+  background: var(--fundo);
+  font-size: 1.0625rem;
+}
+
+.campo__entrada:hover {
+  border-color: var(--cinza-linha-forte);
+}
+
+.campo__entrada:focus {
+  background: var(--branco);
+  border-color: var(--preto);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+.campo.is-invalido .campo__entrada {
+  padding: 15px 19px;
+  background-color: var(--branco);
+}
+
+.campo__selecao {
+  padding-right: 48px;
+  background-position: right 20px center;
+}
+
+.campo__texto {
+  min-height: 180px;
+}
+
+.campo__ajuda,
+.formulario__aviso {
+  font-size: 0.9375rem;
+}
+
+.campo__erro::before {
+  border-radius: 50%;
+}
+
+.formulario__enviar {
+  min-width: 260px;
+}
+
+.formulario__status {
+  border-radius: var(--raio-lg);
+  border: 1px solid var(--cinza-linha);
+  border-left: 0;
+  background: var(--fundo);
+}
+
+.contato__lado {
+  gap: var(--coluna-gap);
+}
+
+.contato__bloco {
+  padding: clamp(22px, 2.6vw, 30px);
+  border-radius: var(--raio-lg);
+  background: var(--branco);
+}
+
+.contato__bloco:first-child {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.contato__bloco:first-child .contato__bloco-titulo {
+  color: var(--branco);
+  border-color: var(--linha-escura-forte);
+}
+
+.contato__bloco:first-child .proximos .mono {
+  border-color: var(--linha-escura-forte);
+  color: var(--branco);
+}
+
+.contato__bloco-titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--texto);
+  border-bottom-color: var(--cinza-linha);
+}
+
+.proximos li {
+  grid-template-columns: 44px 1fr;
+  align-items: center;
+  gap: var(--esp-3);
+}
+
+.proximos .mono {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--cinza-linha-forte);
+}
+
+.proximos p {
+  font-size: 1rem;
+}
+
+.canais dt {
+  font-size: 0.9375rem;
+}
+
+.hero-contato__lead {
+  grid-column: 8 / -1;
+}
+
+@media (max-width: 900px) {
+  .hero-contato__lead {
+    grid-column: 1 / -1;
+  }
+}

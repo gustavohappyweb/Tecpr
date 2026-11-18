@@ -1,0 +1,95 @@
+/* ==========================================================================
+   TECPR — página 404
+   ========================================================================== */
+
+.erro {
+  display: flex;
+  align-items: center;
+  min-height: min(100svh, 880px);
+  padding-top: calc(var(--altura-cabecalho) + 48px);
+  padding-bottom: var(--esp-9);
+  background: var(--fundo);
+}
+
+.erro__grade {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--coluna-gap);
+  row-gap: var(--esp-6);
+  align-items: center;
+}
+
+.erro__codigo {
+  grid-column: 1 / span 5;
+  font-family: var(--fonte-base);
+  font-weight: 700;
+  font-size: clamp(6rem, 3rem + 10vw, 12rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--cinza-linha-forte);
+  user-select: none;
+}
+
+.erro__texto {
+  grid-column: 7 / -1;
+}
+
+.erro__texto .rotulo {
+  margin-bottom: var(--esp-4);
+}
+
+.erro__texto .lead {
+  margin-top: var(--esp-5);
+}
+
+.erro__texto .botoes {
+  margin-top: var(--esp-6);
+}
+
+/* Na 404 clara, as variantes "claras" dos botões viram as versões escuras */
+.erro .botao--claro {
+  --botao-fundo: var(--preto);
+  --botao-texto: var(--branco);
+  --botao-borda: var(--preto);
+  --botao-fundo-hover: #2b2b2b;
+  --botao-texto-hover: var(--branco);
+  --botao-borda-hover: #2b2b2b;
+}
+
+.erro .botao--contorno-claro {
+  --botao-texto: var(--texto);
+  --botao-borda: var(--cinza-linha-forte);
+  --botao-texto-hover: var(--texto);
+  --botao-borda-hover: var(--preto);
+}
+
+.erro__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2) var(--esp-5);
+  margin-top: var(--esp-6);
+  padding-top: var(--esp-4);
+  border-top: 1px solid var(--cinza-linha);
+  font-size: var(--texto-pequeno);
+}
+
+.erro__links a {
+  color: var(--texto-2);
+  padding-block: 6px;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+}
+
+.erro__links a:hover {
+  color: var(--texto);
+  text-decoration-color: currentColor;
+}
+
+@media (max-width: 900px) {
+  .erro__codigo,
+  .erro__texto {
+    grid-column: 1 / -1;
+  }
+}

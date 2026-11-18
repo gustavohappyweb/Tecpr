@@ -1,0 +1,647 @@
+/* ==========================================================================
+   TECPR — estilos das páginas institucionais (Sobre e Metodologia)
+   ========================================================================== */
+
+/* ---------- Sobre: hero com ficha em cartão ---------- */
+
+.hero-sobre__texto {
+  grid-column: 1 / span 7;
+}
+
+.ficha {
+  grid-column: 8 / -1;
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border-radius: var(--raio-xl);
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.ficha__linha {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: var(--esp-4);
+  align-items: center;
+  min-height: 66px;
+  padding: 12px 20px;
+  border-radius: var(--raio-md);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.ficha dt {
+  color: var(--cinza-claro-texto);
+}
+
+.ficha dd {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .hero-sobre__texto,
+  .ficha {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Sobre: quem somos ---------- */
+
+.historia .grade {
+  align-items: stretch;
+}
+
+.historia__titulo {
+  grid-column: 1 / span 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.historia__titulo .rotulo {
+  align-self: flex-start;
+  margin-bottom: var(--esp-5);
+}
+
+.historia__foto {
+  margin-top: var(--esp-6);
+  flex: 1;
+}
+
+.historia__foto .foto__moldura {
+  height: 100%;
+  min-height: 280px;
+  aspect-ratio: auto;
+}
+
+.historia__texto {
+  grid-column: 6 / -1;
+  padding: clamp(28px, 4vw, 52px);
+  border-radius: var(--raio-xl);
+  background: var(--branco);
+  color: var(--texto-2);
+}
+
+.historia__texto .lead {
+  color: var(--texto);
+  max-width: none;
+}
+
+@media (max-width: 900px) {
+  .historia__titulo,
+  .historia__texto {
+    grid-column: 1 / -1;
+  }
+
+  .historia__foto .foto__moldura {
+    aspect-ratio: 3 / 2;
+    min-height: 0;
+  }
+}
+
+/* ---------- Sobre: frentes em cartões ---------- */
+
+.frentes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: var(--coluna-gap);
+}
+
+.frentes > li {
+  display: flex;
+}
+
+.frente {
+  --frente-espaco: clamp(24px, 3vw, 36px);
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  padding: var(--frente-espaco);
+  padding-right: calc(var(--frente-espaco) + 56px + var(--esp-5));
+  border-radius: var(--raio-xl);
+  background: var(--fundo);
+  transition: background-color var(--hover) var(--curva-hover), color var(--hover) var(--curva-hover);
+}
+
+.frente__numero {
+  color: var(--cinza-texto);
+  transition: color var(--hover) var(--curva-hover);
+}
+
+.frente__nome {
+  margin-top: var(--esp-5);
+  font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.frente__texto {
+  min-height: calc(2 * 1.6em);
+  color: var(--texto-2);
+  transition: color var(--hover) var(--curva-hover);
+}
+
+.frente svg {
+  position: absolute;
+  right: var(--frente-espaco);
+  bottom: var(--frente-espaco);
+  width: 56px;
+  height: 56px;
+  padding: 19px;
+  border-radius: 50%;
+  background: var(--preto);
+  color: var(--branco);
+  transition: transform var(--hover) var(--curva-hover), background-color var(--hover) var(--curva-hover),
+    color var(--hover) var(--curva-hover);
+}
+
+.frente:hover {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.frente:hover .frente__texto,
+.frente:hover .frente__numero {
+  color: var(--cinza-claro-texto);
+}
+
+.frente:hover svg {
+  background: var(--branco);
+  color: var(--preto);
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 760px) {
+  .frentes {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Sobre: missão, visão e valores (seção escura) ---------- */
+
+.proposito .cabeca-secao__apoio .pendente {
+  color: var(--cinza-claro-texto);
+}
+
+.proposito__blocos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--coluna-gap);
+}
+
+.proposito__bloco {
+  padding: clamp(28px, 3.6vw, 48px);
+  border-radius: var(--raio-xl);
+  background: var(--grafite);
+  border: 1px solid var(--linha-escura);
+}
+
+.proposito__rotulo {
+  display: inline-flex;
+  margin-bottom: var(--esp-5);
+  padding: 7px 14px;
+  border-radius: var(--raio-pilula);
+  background: var(--branco);
+  color: var(--preto);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.proposito__frase {
+  font-size: clamp(1.375rem, 1.15rem + 0.8vw, 1.875rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
+.valores {
+  margin-top: var(--coluna-gap);
+  padding: clamp(28px, 3.6vw, 48px);
+  border-radius: var(--raio-xl);
+  background: var(--grafite);
+  border: 1px solid var(--linha-escura);
+}
+
+.valores__lista {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.valor {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: var(--esp-3);
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: var(--raio-md);
+  background: rgba(255, 255, 255, 0.06);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.valor .mono {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--linha-escura-forte);
+  color: var(--branco);
+}
+
+@media (max-width: 960px) {
+  .proposito__blocos,
+  .valores__lista {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Sobre: compromissos ---------- */
+
+.compromissos__colunas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--coluna-gap);
+}
+
+.compromissos__coluna {
+  padding: clamp(24px, 3.4vw, 44px);
+  border-radius: var(--raio-xl);
+  background: var(--branco);
+}
+
+.compromissos__coluna .titulo-3 {
+  margin-bottom: var(--esp-5);
+}
+
+.compromissos__coluna--limites {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.compromissos__coluna--limites .titulo-3 {
+  color: var(--branco);
+}
+
+.compromissos__coluna--limites .lista-tracos > li {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.compromissos__coluna--limites .lista-tracos > li::before {
+  background-color: var(--branco);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M8 8l8 8M16 8l-8 8'/%3E%3C/svg%3E");
+}
+
+.compromissos__coluna--limites .lista-tracos strong {
+  color: var(--branco);
+}
+
+.compromissos__coluna--limites .lista-tracos span {
+  color: var(--cinza-claro-texto);
+}
+
+@media (max-width: 860px) {
+  .compromissos__colunas {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Metodologia: princípios ---------- */
+
+.principios {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--coluna-gap);
+}
+
+.principio {
+  display: grid;
+  align-content: start;
+  gap: var(--esp-3);
+  padding: clamp(24px, 2.6vw, 34px);
+  border-radius: var(--raio-lg);
+  background: var(--branco);
+  transition: background-color var(--hover) var(--curva-hover), color var(--hover) var(--curva-hover),
+    transform var(--hover) var(--curva-hover);
+}
+
+.principio .mono {
+  display: grid;
+  place-items: center;
+  justify-self: start;
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--esp-4);
+  border-radius: 50%;
+  background: var(--preto);
+  color: var(--branco);
+  transition: background-color var(--hover) var(--curva-hover), color var(--hover) var(--curva-hover);
+}
+
+.principio__titulo {
+  font-size: 1.3125rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.principio p {
+  color: var(--texto-2);
+  transition: color var(--hover) var(--curva-hover);
+}
+
+.principio:hover {
+  background: var(--preto);
+  color: var(--branco);
+  transform: translateY(-4px);
+}
+
+.principio:hover .mono {
+  background: var(--branco);
+  color: var(--preto);
+}
+
+.principio:hover p {
+  color: var(--cinza-claro-texto);
+}
+
+@media (max-width: 960px) {
+  .principios {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .principios {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Metodologia: etapas detalhadas com índice fixo ---------- */
+
+.etapas-longas__cabeca {
+  grid-column: 1 / span 4;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--altura-cabecalho) + 24px);
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: var(--raio-xl);
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.etapas-longas__cabeca .rotulo {
+  margin-bottom: var(--esp-5);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--linha-escura);
+  color: var(--branco);
+}
+
+.etapas-longas__cabeca .rotulo::before {
+  background: var(--branco);
+}
+
+.etapas-longas__cabeca .titulo-2 {
+  color: var(--branco);
+  font-size: clamp(1.875rem, 1.4rem + 1.4vw, 2.625rem);
+}
+
+.etapas-longas__cabeca .titulo-2 em {
+  color: #8f8f8f;
+}
+
+.etapas-longas__indice {
+  display: grid;
+  gap: 6px;
+  margin-top: var(--esp-6);
+}
+
+.etapas-longas__indice a {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  column-gap: 14px;
+  align-items: center;
+  min-height: 52px;
+  padding: 6px 18px 6px 8px;
+  border-radius: var(--raio-pilula);
+  font-weight: 500;
+  color: var(--cinza-claro-texto);
+  transition: background-color var(--hover) var(--curva-hover), color var(--hover) var(--curva-hover);
+}
+
+.etapas-longas__indice a .mono {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--linha-escura-forte);
+  color: var(--branco);
+}
+
+.etapas-longas__indice a:hover,
+.etapas-longas__indice a.is-atual {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--branco);
+}
+
+.etapas-longas__indice a.is-atual .mono {
+  background: var(--branco);
+  color: var(--preto);
+  border-color: var(--branco);
+}
+
+.etapas-longas {
+  grid-column: 5 / -1;
+  display: grid;
+  gap: var(--coluna-gap);
+}
+
+.etapa-longa {
+  padding: clamp(28px, 3.4vw, 48px);
+  border-radius: var(--raio-xl);
+  background: var(--branco);
+}
+
+.etapa-longa__numero {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 14px;
+  margin-bottom: var(--esp-5);
+  border-radius: var(--raio-pilula);
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.etapa-longa .titulo-3 {
+  font-size: clamp(1.5rem, 1.25rem + 0.8vw, 2rem);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--esp-3);
+}
+
+.etapa-longa p {
+  color: var(--texto-2);
+  max-width: 62ch;
+}
+
+.etapa-longa__itens {
+  display: grid;
+  gap: 8px;
+  margin-top: var(--esp-5);
+}
+
+.etapa-longa__itens li {
+  position: relative;
+  padding: 12px 16px 12px 46px;
+  border-radius: var(--raio-md);
+  background: var(--fundo);
+  font-weight: 500;
+}
+
+.etapa-longa__itens li::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  translate: 0 -50%;
+  border-radius: 50%;
+  background: var(--preto)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 12.5l3 3 7-7'/%3E%3C/svg%3E")
+    center / 13px no-repeat;
+}
+
+@media (max-width: 960px) {
+  .etapas-longas__cabeca {
+    position: static;
+    grid-column: 1 / -1;
+  }
+
+  .etapas-longas__indice {
+    display: none;
+  }
+
+  .etapas-longas {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Metodologia: pesquisa presencial (seção escura) ---------- */
+
+.presencial .grade {
+  align-items: center;
+}
+
+.presencial__foto {
+  grid-column: 1 / span 6;
+}
+
+.presencial__texto {
+  grid-column: 8 / -1;
+  color: var(--cinza-claro-texto);
+}
+
+.presencial__texto .rotulo {
+  margin-bottom: var(--esp-5);
+}
+
+.presencial__texto .texto {
+  margin-top: var(--esp-5);
+}
+
+.presencial__texto .lead {
+  color: var(--branco);
+  max-width: none;
+}
+
+@media (max-width: 900px) {
+  .presencial__foto,
+  .presencial__texto {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Metodologia: alcance e limites ---------- */
+
+.limites__lista {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--coluna-gap);
+}
+
+.limite {
+  padding: clamp(24px, 2.8vw, 36px);
+  border-radius: var(--raio-xl);
+  background: var(--branco);
+  border-top: 0;
+}
+
+.limite__titulo {
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: var(--esp-3);
+}
+
+.limite__titulo::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin-bottom: var(--esp-5);
+  border-radius: 4px;
+  background: var(--preto);
+}
+
+.limite p {
+  color: var(--texto-2);
+}
+
+@media (max-width: 860px) {
+  .limites__lista {
+    grid-template-columns: 1fr;
+  }
+}
+
+.secao--suave .etapa-longa {
+  background: var(--fundo);
+}
+
+/* ---------- Leitura rápida: ícones nas etapas, princípios e limites ---------- */
+
+.etapa-longa {
+  position: relative;
+}
+
+.etapa-longa__icone {
+  position: absolute;
+  top: clamp(28px, 3.4vw, 48px);
+  right: clamp(28px, 3.4vw, 48px);
+}
+
+.principio .mono .icone {
+  width: 24px;
+  height: 24px;
+}
+
+.limite .cartao__icone {
+  margin-bottom: var(--esp-5);
+}
+
+.limite:has(.cartao__icone) .limite__titulo::before {
+  display: none;
+}
+
+.historia__texto .pontos li {
+  font-size: 1rem;
+}

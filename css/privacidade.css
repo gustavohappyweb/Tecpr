@@ -1,0 +1,203 @@
+/* ==========================================================================
+   TECPR — Política de Privacidade
+   ========================================================================== */
+
+.politica__meta {
+  grid-column: 9 / -1;
+  display: grid;
+  gap: var(--esp-3);
+  color: var(--cinza-texto);
+}
+
+.politica {
+  padding-top: clamp(48px, 6vw, 96px);
+}
+
+.politica__indice {
+  grid-column: 1 / span 3;
+  align-self: start;
+  position: sticky;
+  top: calc(var(--altura-cabecalho) + 32px);
+}
+
+.politica__indice .mono {
+  color: var(--cinza-texto);
+  padding-bottom: var(--esp-3);
+  border-bottom: 1px solid var(--cinza-linha-forte);
+}
+
+.politica__indice ol {
+  counter-reset: indice;
+}
+
+.politica__indice li {
+  counter-increment: indice;
+}
+
+.politica__indice a {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  padding-block: 9px;
+  border-bottom: 1px solid var(--cinza-linha);
+  font-size: 0.875rem;
+  transition: padding var(--hover) var(--curva-hover);
+}
+
+.politica__indice a::before {
+  content: counter(indice, decimal-leading-zero);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--cinza-texto);
+  padding-top: 2px;
+}
+
+.politica__indice a:hover {
+  padding-left: 6px;
+}
+
+.politica__texto {
+  grid-column: 5 / span 7;
+  max-width: 72ch;
+  color: var(--texto-2);
+}
+
+.politica__texto > * + * {
+  margin-top: 1em;
+}
+
+.politica__texto .lead {
+  color: var(--preto);
+  max-width: none;
+}
+
+.politica__texto h2 {
+  margin-top: var(--esp-8);
+  padding-top: var(--esp-5);
+  border-top: 1px solid var(--cinza-linha);
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.875rem);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  line-height: 1.2;
+  color: var(--preto);
+}
+
+.politica__texto h3 {
+  margin-top: var(--esp-6);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--preto);
+}
+
+.politica__texto ul {
+  display: grid;
+  gap: 8px;
+}
+
+.politica__texto ul li {
+  position: relative;
+  padding-left: 26px;
+}
+
+.politica__texto ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 12px;
+  height: 1px;
+  background: var(--preto);
+}
+
+.politica__texto a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 960px) {
+  .politica__meta,
+  .politica__indice,
+  .politica__texto {
+    grid-column: 1 / -1;
+  }
+
+  .politica__indice {
+    position: static;
+  }
+
+  .politica__indice ol {
+    columns: 2;
+    column-gap: var(--esp-5);
+  }
+
+  .politica__indice li {
+    break-inside: avoid;
+  }
+}
+
+@media (max-width: 560px) {
+  .politica__indice ol {
+    columns: 1;
+  }
+}
+
+/* ---------- Linguagem de cartões (reformulação visual) ---------- */
+
+.politica__indice {
+  padding: 22px;
+  border-radius: var(--raio-lg);
+  background: var(--branco);
+}
+
+.politica__indice a {
+  font-size: 0.9375rem;
+}
+
+.politica__texto {
+  grid-column: 5 / -1;
+  max-width: none;
+  padding: clamp(28px, 4vw, 56px);
+  border-radius: var(--raio-xl);
+  background: var(--branco);
+  font-size: 1.0625rem;
+}
+
+.politica__texto > * {
+  max-width: 70ch;
+}
+
+.politica__texto h2 {
+  font-family: var(--fonte-base);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem);
+}
+
+.politica__meta {
+  grid-column: 8 / -1;
+}
+
+@media (max-width: 960px) {
+  .politica__texto,
+  .politica__meta {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Listas da política (cookies e compromisso do usuário) ---------- */
+
+.politica__texto ul li strong {
+  display: block;
+  color: var(--preto);
+}
+
+.politica__texto ol {
+  display: grid;
+  gap: 8px;
+}
+
+.politica__texto h3 + p,
+.politica__texto h3 + ul {
+  margin-top: 0.6em;
+}
